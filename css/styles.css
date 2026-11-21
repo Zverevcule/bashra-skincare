@@ -122,6 +122,7 @@ em{font-style:italic}
 .logo-s{font-size:.5rem;letter-spacing:.55em;padding-left:.55em;margin-top:5px;color:var(--sage)}
 .icon-btn{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;position:relative;transition:background .3s}
 .icon-btn:hover{background:rgba(72,87,45,.08)}
+.mobile-nav{display:none}
 .lang-toggle{min-height:40px;padding:0 14px;border:1px solid var(--line);border-radius:999px;color:var(--olive);font-size:.76rem;font-weight:500;transition:background .25s,color .25s}
 .lang-toggle:hover{background:var(--olive);color:var(--cream)}
 .burger span{display:block;width:22px;height:1px;background:currentColor;margin:5px 0;transition:transform .4s var(--ease)}
@@ -467,11 +468,50 @@ em{font-style:italic}
   .rv,.ln>span{opacity:1;transform:none}
 }
 
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--walnut);outline-offset:3px}
+
+@media(max-width:760px){
+  :root{--pad:clamp(18px,5vw,26px)}
+  body{padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+  .hdr{grid-template-columns:1fr auto 1fr;padding:8px 16px;gap:4px}
+  .hdr-l,.hdr-r{gap:4px}
+  .hdr-r{justify-content:flex-end}
+  .logo-w{font-size:1.42rem;letter-spacing:.16em;padding-left:.16em}
+  .logo-s{font-size:.45rem;letter-spacing:.38em;padding-left:.38em;margin-top:4px}
+  .icon-btn{width:48px;height:48px}
+  .lang-toggle{min-width:48px;min-height:48px;padding:0 10px;font-size:.78rem}
+  .hero{min-height:calc(100svh - 64px);padding-top:88px;padding-bottom:38px;gap:24px;align-content:center}
+  .hero-copy{text-align:center}
+  .hero-h{font-size:clamp(3rem,12vw,4.5rem);margin:.2em 0 .28em}
+  .lead{max-width:30em;margin-inline:auto}
+  .cta{justify-content:center;gap:10px 18px;margin-top:24px}
+  .hero-stage{width:min(76vw,340px)}
+  .hero-cap{font-size:.55rem;letter-spacing:.12em;bottom:-28px}
+  .btn{min-height:50px;padding-inline:1.35em;font-size:.7rem;letter-spacing:.12em}
+  .tlink{min-height:44px;display:inline-flex;align-items:center;font-size:.7rem;letter-spacing:.12em}
+  .mm{padding:84px var(--pad) calc(34px + env(safe-area-inset-bottom))}
+  .mm-close{width:48px;height:48px;top:10px}
+  .mm nav a{min-height:54px}
+  .f-bar{font-size:.52rem;letter-spacing:.18em}
+  .f-skip{min-height:48px;font-size:.58rem;letter-spacing:.14em}
+  .gal-nav{width:48px;height:48px}
+  .acc-h{min-height:56px}
+  .ftr-bot{padding-bottom:12px}
+  .mobile-nav{position:fixed;left:0;right:0;bottom:0;z-index:65;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));height:calc(66px + env(safe-area-inset-bottom));padding:6px 10px env(safe-area-inset-bottom);background:rgba(245,235,219,.96);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid var(--line)}
+  .mobile-nav a{display:flex;min-width:0;min-height:52px;flex-direction:column;align-items:center;justify-content:center;gap:3px;border-radius:14px;color:var(--sage);font-size:.61rem;line-height:1.1;white-space:nowrap;transition:background .2s,color .2s}
+  .mobile-nav a.on{background:rgba(72,87,45,.09);color:var(--olive)}
+  .mobile-nav svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+  html[lang="ar"] .hero-copy{text-align:center}
+  html[lang="ar"] .mm-close{right:auto;left:var(--pad)}
+}
+
 html[lang="ar"] body{font-family:'Noto Naskh Arabic','Jost',system-ui,sans-serif;line-height:1.8}
 html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] h4{font-family:'Noto Naskh Arabic',Georgia,serif;line-height:1.3;letter-spacing:0}
+html[lang="ar"] .logo-w,html[lang="ar"] .f-logo,html[lang="ar"] .ftr-word{font-family:'Noto Naskh Arabic',Georgia,serif;letter-spacing:0;padding-left:0}
 html[lang="ar"] .eyebrow,html[lang="ar"] .nav a,html[lang="ar"] .btn,html[lang="ar"] .tlink{letter-spacing:0;text-transform:none}
 html[lang="ar"] .hdr-l,html[lang="ar"] .hdr-r{direction:rtl}
 html[lang="ar"] .hero-copy,html[lang="ar"] .ph,html[lang="ar"] .phil-col,html[lang="ar"] .ftr{text-align:right}
+html[lang="ar"] .logo-s{letter-spacing:0;padding-left:0}
 html[lang="ar"] .hero .cta{justify-content:flex-start}
 html[lang="ar"] .ftr-cols{direction:rtl}
 @media(max-width:999px){.lang-toggle{min-height:38px;padding:0 11px}}

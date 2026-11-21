@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BASHRA Skincare — Nature's Care For Your Skin</title>
+<title>Malpn — Nature's Care For Your Skin</title>
+<meta name="description" content="Malpn / ملبن — a calm, botanical skincare ritual, thoughtfully created in Egypt.">
 <meta name="theme-color" content="#48572D">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,30 +15,30 @@
 <body class="lock">
 
 <!-- Intro film -->
-<div class="film" id="film" role="dialog" aria-label="BASHRA intro film">
+<div class="film" id="film" role="dialog" aria-label="Malpn intro film">
   <div class="f-bg" id="fbgA"></div><div class="f-bg" id="fbgB"></div>
   <canvas id="fdust"></canvas>
   <div class="f-vig"></div>
-  <div class="f-bar t"><span>BASHRA · The Ritual Collection</span><span id="fcount">—</span></div>
+  <div class="f-bar t"><span>Malpn · The Ritual Collection</span><span id="fcount">—</span></div>
   <div class="f-sc f-open" data-bg="radial-gradient(80% 70% at 50% 45%,#3E4D24 0%,#1B230E 60%,#0E1206 100%)">
     <div><div class="l"></div><p class="t1">Nature meets science</p><p class="t2">Nature's care for your skin</p></div>
   </div>
-  <div class="f-sc f-photo" data-bg="#333520" data-count="BASHRA">
+  <div class="f-sc f-photo" data-bg="#333520" data-count="Malpn">
     <picture><source media="(orientation: portrait)" srcset="assets/images/hero.jpg"><img src="assets/images/studio.jpg" alt=""></picture>
-    <div class="f-pcap"><p>BASHRA</p><h2>Skincare <em>Rituals</em></h2></div>
+    <div class="f-pcap"><p>Malpn</p><h2>Skincare <em>Rituals</em></h2></div>
   </div>
   <div id="fprods"></div>
   <div class="f-sc f-fin" id="ffin" data-bg="radial-gradient(85% 75% at 50% 58%,#D8B488 0%,#8A5D36 46%,#26170A 100%)">
-    <div class="f-mark" data-mark></div><div class="f-logo">BASHRA</div>
+    <div class="f-mark" data-mark></div><div class="f-logo">Malpn</div>
     <div class="f-tag">Skincare · Nature meets science</div>
     <div class="f-row" id="frow"></div>
-    <button class="btn light f-enter" data-film-close>Enter the world of BASHRA <span class="arr">→</span></button>
+    <button class="btn light f-enter" data-film-close>Enter the world of Malpn <span class="arr">→</span></button>
   </div>
   <div class="f-prog"><i id="fprog"></i></div>
   <div class="f-bar b"><span>Egypt</span><button class="f-skip" data-film-close>Skip intro ›</button></div>
 </div>
 <!-- Page transition -->
-<div class="pt" id="pt"><div class="pt-mark"><div class="logo" style="color:var(--cream)"><span class="logo-w">BASHRA</span></div></div></div>
+<div class="pt" id="pt"><div class="pt-mark"><div class="logo" style="color:var(--cream)"><span class="logo-w">Malpn</span></div></div></div>
 
 <!-- Header -->
 <header class="hdr" id="hdr">
@@ -44,7 +46,7 @@
     <button class="icon-btn burger" id="burger" aria-label="Open menu"><div><span></span><span></span></div></button>
     <nav class="nav"><a href="#shop" data-r="shop">Shop</a><a href="#rituals" data-r="rituals">Rituals</a><a href="#ingredients" data-r="ingredients">Ingredients</a></nav>
   </div>
-  <a href="#home" class="logo" aria-label="BASHRA home"><span class="logo-m" data-mark></span><span class="logo-w">BASHRA</span><span class="logo-s">SKINCARE</span></a>
+  <a href="#home" class="logo" aria-label="Malpn home"><span class="logo-m" data-mark></span><span class="logo-w">Malpn</span><span class="logo-s">SKINCARE</span></a>
   <div class="hdr-r">
     <nav class="nav"><a href="#story" data-r="story">Our Story</a><a href="#contact" data-r="contact">Contact</a></nav>
     <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">العربية</button>
@@ -73,12 +75,19 @@
 
 <main id="app"></main>
 
+<nav class="mobile-nav" aria-label="Quick navigation">
+  <a href="#home" data-r="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
+  <a href="#shop" data-r="shop"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span>Shop</span></a>
+  <a href="#rituals" data-r="rituals"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C11 4 6 7 6 14a6 6 0 0 0 6 6c7 0 8-8 8-16Z"/><path d="M4 21c2-5 6-8 11-11"/></svg><span>Rituals</span></a>
+  <a href="#cart" data-r="cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Your Bag</span></a>
+</nav>
+
 <!-- Footer -->
 <footer class="ftr">
   <div class="wrap">
     <div class="ftr-top">
       <div>
-        <p class="eyebrow" style="color:var(--taupe)">The BASHRA Circle</p>
+        <p class="eyebrow" style="color:var(--taupe)">The Malpn Circle</p>
         <h3 style="margin-top:14px">Rituals, launches &amp; <em>quiet</em> news.</h3>
         <form class="nl" id="nl"><input type="email" required placeholder="Your email address" aria-label="Email"><button>Join →</button></form>
         <div class="nl-msg" id="nlMsg"></div>
@@ -89,8 +98,8 @@
         <div><h4>Help</h4><a href="#contact">Contact Us</a><a href="#cart">Your Bag</a></div>
       </div>
     </div>
-    <div class="ftr-word">BASHRA</div>
-    <div class="ftr-bot"><span>© BASHRA Skincare · Egypt · <button data-film style="text-decoration:underline;text-underline-offset:3px">Watch the film</button></span><span>Prototype preview — checkout, payments &amp; forms are not connected yet.</span></div>
+    <div class="ftr-word">Malpn</div>
+    <div class="ftr-bot"><span>© Malpn Skincare · Egypt · <button data-film style="text-decoration:underline;text-underline-offset:3px">Watch the film</button></span><span>Prototype preview — checkout, payments &amp; forms are not connected yet.</span></div>
   </div>
 </footer>
 

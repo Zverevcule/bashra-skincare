@@ -2,9 +2,16 @@
 (() => {
   const dictionary = {
     "Nature meets science":"الطبيعة تلتقي بالعلم",
+    "Malpn":"ملبن",
+    "Malpn home":"ملبن الرئيسية",
+    "Malpn intro film":"فيلم تقديم ملبن",
+    "Switch language":"تغيير اللغة",
+    "SKINCARE":"العناية بالبشرة",
+    "Quick navigation":"التنقل السريع",
+    "Malpn Skincare — Nature's Care For Your Skin":"ملبن — عناية الطبيعة ببشرتك",
     "Nature's care for your skin":"عناية الطبيعة ببشرتك",
     "Skincare Rituals":"طقوس العناية بالبشرة",
-    "Enter the world of BASHRA":"اكتشفي عالم بشرة",
+    "Enter the world of Malpn":"اكتشفي عالم ملبن",
     "Skip intro ›":"تخطي المقدمة ›",
     "Shop":"تسوقي",
     "Rituals":"الطقوس",
@@ -22,7 +29,7 @@
     "Close menu":"أغلقي القائمة",
     "Open bag":"افتحي الحقيبة",
     "Close bag":"أغلقي الحقيبة",
-    "The BASHRA Circle":"عالم بشرة",
+    "The Malpn Circle":"مجتمع ملبن",
     "Rituals, launches &":"طقوسنا وإصداراتنا و",
     "quiet":"أخبارنا الهادئة",
     "news.":".",
@@ -52,9 +59,9 @@
     "Nature":"الطبيعة",
     "meets":"تلتقي بـ",
     "Science":"العلم",
-    "Our inspiration — the calm of botanicals and the warmth of Egyptian earth, reflected in every colour, texture and detail of BASHRA.":"مصدر إلهامنا هو هدوء النباتات ودفء الأرض المصرية، وينعكس ذلك في ألوان بشرة وملمسها وتفاصيلها.",
+    "Our inspiration — the calm of botanicals and the warmth of Egyptian earth, reflected in every colour, texture and detail of Malpn.":"مصدر إلهامنا هو هدوء النباتات ودفء الأرض المصرية، وينعكس ذلك في ألوان ملبن وملمسها وتفاصيلها.",
     "Our method — a considered, step-by-step approach to care. Four essentials, each with its own place in your daily ritual.":"منهجنا عناية مدروسة خطوة بخطوة. أربعة مستحضرات أساسية، لكل منها مكان في طقسك اليومي.",
-    "BASHRA Skincare Rituals":"طقوس العناية من بشرة",
+    "Malpn Skincare Rituals":"طقوس العناية من ملبن",
     "Nature's care,":"عناية الطبيعة،",
     "beautifully kept.":"بلمسة من الجمال.",
     "Gentle Face Cleanser, Radiant Skin Toner, Revitalizing Face Serum and Nourishing Face Cream — four essentials, created to live together as one daily ritual.":"غسول لطيف، وتونر لإشراقة البشرة، وسيروم منشط، وكريم مغذٍ — أربعة أساسيات لطقس يومي متكامل.",
@@ -62,7 +69,7 @@
     "Collection":"المستحضرات",
     "View all products":"شاهدي كل المنتجات",
     "Add to bag":"أضيفي إلى الحقيبة",
-    "Step one of the BASHRA ritual — begin with a fresh, clean canvas.":"الخطوة الأولى في طقس بشرة — ابدئي ببشرة نظيفة ومنتعشة.",
+    "Step one of the Malpn ritual — begin with a fresh, clean canvas.":"الخطوة الأولى في طقس ملبن — ابدئي ببشرة نظيفة ومنتعشة.",
     "Step two of the ritual — the bridge between cleansing and treatment.":"الخطوة الثانية — حلقة الوصل بين التنظيف والعناية المركزة.",
     "Step three — a concentrated moment of care before your cream.":"الخطوة الثالثة — عناية مركزة قبل وضع الكريم.",
     "Step four — complete your ritual with comfort and calm.":"الخطوة الرابعة — أكملي طقسك بلمسة من الراحة والهدوء.",
@@ -85,7 +92,7 @@
     "Where":"حيث",
     "nature":"الطبيعة",
     "meets science.":"تلتقي بالعلم.",
-    "BASHRA is an Egyptian skincare brand built on a simple belief: everyday care can be elegant, natural and calm — without ever feeling complicated.":"بشرة علامة عناية مصرية تنطلق من إيمان بسيط: يمكن للعناية اليومية أن تكون أنيقة وطبيعية وهادئة، بلا تعقيد.",
+    "Malpn is an Egyptian skincare brand built on a simple belief: everyday care can be elegant, natural and calm — without ever feeling complicated.":"ملبن علامة عناية مصرية تنطلق من إيمان بسيط: يمكن للعناية اليومية أن تكون أنيقة وطبيعية وهادئة، بلا تعقيد.",
     "Philosophy":"الفلسفة",
     "We draw our inspiration from nature — its colours, its calm, its rhythm — and pair it with a clear, structured way of caring for skin.":"نستلهم من الطبيعة — ألوانها وهدوئها وإيقاعها — ونجمع ذلك مع نهج واضح ومنظم للعناية بالبشرة.",
     "The result is a ritual of four essentials, each designed to take its own place in your day.":"والنتيجة طقس من أربعة مستحضرات أساسية، لكل منها مكانها في يومك.",
@@ -94,16 +101,16 @@
     "We believe premium care should feel warm and welcoming — never intimidating. Considered design, honest presentation and a ritual that is easy to follow.":"نؤمن بأن العناية الفاخرة يجب أن تكون دافئة ومرحبة. تصميم مدروس ومعلومات واضحة وطقس يسهل اتباعه.",
     "Our roots":"جذورنا",
     "Made in Egypt, for you":"صُنع في مصر لأجلك",
-    "BASHRA is proudly Egyptian — created to stand among international skincare brands while staying true to its own identity.":"بشرة علامة مصرية نفخر بها، وُلدت لتكون بين علامات العناية العالمية مع الحفاظ على هويتها.",
+    "Malpn is proudly Egyptian — created to stand among international skincare brands while staying true to its own identity.":"ملبن علامة مصرية نفخر بها، وُلدت لتكون بين علامات العناية العالمية مع الحفاظ على هويتها.",
     "Botanical Library.":"مكتبة النباتات.",
-    "A considered look at what goes into every BASHRA formula — where it comes from and why it has a place in your ritual.":"نظرة مدروسة إلى مكونات تركيبات بشرة ومصادرها وسبب اختيارها لطقسك.",
+    "A considered look at what goes into every Malpn formula — where it comes from and why it has a place in your ritual.":"نظرة مدروسة إلى مكونات تركيبات ملبن ومصادرها وسبب اختيارها لطقسك.",
     "Ingredient name":"اسم المكوّن",
     "Your daily":"طقسك",
     "ritual.":"اليومي.",
     "Four essentials, one simple order. Each step prepares your skin for the next.":"أربعة مستحضرات بترتيب بسيط. كل خطوة تهيئ بشرتك للخطوة التالية.",
     "View product":"شاهدي المنتج",
     "Follow the pack":"اتبعي الإرشادات",
-    "Always follow the directions printed on each BASHRA product for amount and frequency.":"اتبعي دائمًا تعليمات الاستخدام والكمية والتكرار المطبوعة على كل منتج من بشرة.",
+    "Always follow the directions printed on each Malpn product for amount and frequency.":"اتبعي دائمًا تعليمات الاستخدام والكمية والتكرار المطبوعة على كل منتج من ملبن.",
     "Try it first":"اختبريه أولًا",
     "When introducing any new skincare product, a patch test on a small area of skin is a good habit.":"عند تجربة منتج جديد، من الأفضل اختباره على مساحة صغيرة من البشرة أولًا.",
     "Add the full ritual to bag":"أضيفي الطقس كاملًا إلى الحقيبة",
@@ -143,14 +150,14 @@
     "your ritual":"طقسك",
     "Previous image":"الصورة السابقة",
     "Next image":"الصورة التالية",
-    "Studio renders and photography based on BASHRA packaging designs.":"صور وتصميمات استوديو مستوحاة من عبوات بشرة.",
+    "Studio renders and photography based on Malpn packaging designs.":"صور وتصميمات استوديو مستوحاة من عبوات ملبن.",
     "Add to bag —":"أضيفي إلى الحقيبة —",
     "Remove":"إزالة",
     "Decrease":"تقليل",
     "Increase":"زيادة",
     "Please add your name, a valid email and a message.":"يرجى إدخال الاسم وبريد إلكتروني صحيح ورسالة.",
     "Thank you! (Prototype — sign-ups will be connected to an email service in the live site.)":"شكرًا لكِ! (نسخة تجريبية — ستُربط الاشتراكات بخدمة بريد إلكتروني في الموقع النهائي.)",
-    "Thank you. This is a prototype — the form is not connected yet, so your message was not sent. In the live website it will be delivered to the BASHRA team.":"شكرًا لكِ. هذه نسخة تجريبية والنموذج غير متصل، لذلك لم تُرسل رسالتك. سيصل النموذج إلى فريق بشرة عند تشغيل الموقع.",
+    "Thank you. This is a prototype — the form is not connected yet, so your message was not sent. In the live website it will be delivered to the Malpn team.":"شكرًا لكِ. هذه نسخة تجريبية والنموذج غير متصل، لذلك لم تُرسل رسالتك. سيصل النموذج إلى فريق ملبن عند تشغيل الموقع.",
     "Nature's Care For Your Skin":"عناية الطبيعة ببشرتك",
     "Nature's care for your skin":"عناية الطبيعة ببشرتك",
     "Gentle Face Cleanser":"غسول وجه لطيف",
@@ -161,14 +168,14 @@
     "Library.":"المكتبة.",
     "Botanical studies":"دراسات نباتية",
     "Content in progress":"المحتوى قيد الإعداد",
-    "Ingredient names, origins and roles will be added only from BASHRA's verified formulas. The layout below is ready for them.":"ستُضاف أسماء المكونات ومصادرها ووظائفها بعد التحقق من تركيبات بشرة. والتصميم أدناه جاهز لها.",
-    "Origin, role in the formula, and which BASHRA products feature it.":"المصدر ودور المكوّن والمنتجات التي تحتوي عليه.",
-    "Founder's story, brand origin and the meaning behind the name BASHRA — to be written with you.":"قصة التأسيس وأصل العلامة ومعنى اسم بشرة — تُكتب بالتعاون معك.",
+    "Ingredient names, origins and roles will be added only from Malpn's verified formulas. The layout below is ready for them.":"ستُضاف أسماء المكونات ومصادرها ووظائفها بعد التحقق من تركيبات ملبن. والتصميم أدناه جاهز لها.",
+    "Origin, role in the formula, and which Malpn products feature it.":"المصدر ودور المكوّن والمنتجات التي تحتوي عليه.",
+    "Founder's story, brand origin and the meaning behind the name Malpn — to be written with you.":"قصة التأسيس وأصل العلامة ومعنى اسم ملبن — تُكتب بالتعاون معك.",
     "Your name":"اسمك",
     "Email address":"البريد الإلكتروني",
     "Phone (optional)":"رقم الهاتف (اختياري)",
     "Your message":"رسالتك",
-    "Add BASHRA email":"أضيفي بريد بشرة الإلكتروني",
+    "Add Malpn email":"أضيفي بريد ملبن الإلكتروني",
     "Add WhatsApp number":"أضيفي رقم واتساب",
     "Add @handle":"أضيفي اسم الحساب",
     "Contact us":"تواصلي معنا",
@@ -178,10 +185,10 @@
     "Botanical Ingredients":"مكونات نباتية",
     "Contact Us":"تواصلي معنا",
     "Your Bag":"حقيبتك",
-    "BASHRA — Gentle Face Cleanser":"بشرة — غسول وجه لطيف",
-    "BASHRA — Radiant Skin Toner":"بشرة — تونر لإشراقة البشرة",
-    "BASHRA — Revitalizing Face Serum":"بشرة — سيروم منشط للوجه",
-    "BASHRA — Nourishing Face Cream":"بشرة — كريم مغذٍ للوجه"
+    "Malpn — Gentle Face Cleanser":"ملبن — غسول وجه لطيف",
+    "Malpn — Radiant Skin Toner":"ملبن — تونر لإشراقة البشرة",
+    "Malpn — Revitalizing Face Serum":"ملبن — سيروم منشط للوجه",
+    "Malpn — Nourishing Face Cream":"ملبن — كريم مغذٍ للوجه"
   };
 
   const arabicToEnglish = Object.fromEntries(Object.entries(dictionary).map(([en, ar]) => [ar, en]));
@@ -239,13 +246,13 @@
       toggle.textContent = next === 'ar' ? 'English' : 'العربية';
       toggle.setAttribute('aria-label', next === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
     }
-    try { localStorage.setItem('bashra-language', next); } catch (_) {}
+    try { localStorage.setItem('malpn-language', next); } catch (_) {}
   }
 
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('langToggle');
     if (toggle) toggle.addEventListener('click', () => setLanguage(language === 'en' ? 'ar' : 'en'));
-    try { language = localStorage.getItem('bashra-language') === 'ar' ? 'ar' : 'en'; } catch (_) {}
+    try { language = localStorage.getItem('malpn-language') === 'ar' ? 'ar' : 'en'; } catch (_) {}
     const observer = new MutationObserver(records => {
       for (const record of records) {
         if (record.type === 'characterData') updateNode(record.target);

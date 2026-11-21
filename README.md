@@ -1,6 +1,6 @@
-# BASHRA Skincare
+# Malpn — ملبن
 
-A responsive, bilingual skincare storefront prototype built with plain HTML, CSS, and JavaScript. It supports English and Arabic, remembers the selected language in the browser, and switches the page direction for Arabic.
+A mobile-first, bilingual skincare storefront prototype built with plain HTML, CSS, and JavaScript. It supports English and Arabic, remembers the selected language in the browser, and switches the page direction for Arabic. Phone layouts include a fixed four-item bottom navigation and larger touch targets.
 
 ## Preview locally
 
@@ -22,6 +22,7 @@ The site uses relative asset paths and is ready to publish from the repository r
 - `js/app.js` — page rendering and interactions
 - `js/i18n.js` — English and Arabic UI translations
 - `assets/images/` — supplied product and botanical photography
+- `assets/favicon.svg` — Malpn leaf monogram
 
 ## Prototype notes
 

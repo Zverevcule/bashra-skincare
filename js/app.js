@@ -1,8 +1,8 @@
 
-/* ---------- DATA (replace prices & copy with official BASHRA info) ---------- */
+/* ---------- DATA (replace prices & copy with official Malpn info) ---------- */
 const PRODUCTS = [
   {id:'cleanser', name:'Gentle Face Cleanser', size:'100 ml', step:'Cleanse', n:'01', price:450, tint:'#CBD6A7', shape:'tube',
-   line:'Step one of the BASHRA ritual — begin with a fresh, clean canvas.'},
+   line:'Step one of the Malpn ritual — begin with a fresh, clean canvas.'},
   {id:'toner', name:'Radiant Skin Toner', size:'200 ml', step:'Tone', n:'02', price:380, tint:'#EDD2AE', shape:'tall',
    line:'Step two of the ritual — the bridge between cleansing and treatment.'},
   {id:'serum', name:'Revitalizing Face Serum', size:'30 ml', step:'Treat', n:'03', price:590, tint:'#DCC39C', shape:'dropper',
@@ -13,7 +13,7 @@ const PRODUCTS = [
 const byId = id => PRODUCTS.find(p=>p.id===id);
 const egp = n => 'EGP ' + n.toLocaleString('en-US');
 
-/* ---------- PRODUCT ARTWORK — drawn to match BASHRA's packaging references ---------- */
+/* ---------- PRODUCT ARTWORK — drawn to match Malpn's packaging references ---------- */
 let gid=0;
 const PAL={olive:'#48572D',sage:'#83955F',walnut:'#71421E',cream:'#EFDDBD',taupe:'#CCAD8E'};
 const h2r=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
@@ -27,7 +27,7 @@ const goldG=id=>`<linearGradient id="${id}" x1="0" x2="1"><stop offset="0" stop-
 const woodF=(id,seed)=>`<filter id="${id}" x="0" y="0" width="1" height="1"><feTurbulence type="fractalNoise" baseFrequency="0.5 0.02" numOctaves="3" seed="${seed}"/><feColorMatrix type="matrix" values="0 0 0 0 .14  0 0 0 0 .07  0 0 0 0 .02  0 0 0 2.6 -1.05"/><feComposite in2="SourceAlpha" operator="in"/></filter>`;
 const frostF=id=>`<filter id="${id}" x="0" y="0" width="1" height="1"><feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="2" seed="4"/><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .7 -.22"/><feComposite in2="SourceAlpha" operator="in"/></filter>`;
 const ridges=(x,y,w,h,step=3,o=.14)=>{let s='';for(let i=x+2;i<x+w-1;i+=step)s+=`<line x1="${i}" x2="${i}" y1="${y}" y2="${y+h}"/>`;return `<g stroke="#000" stroke-opacity="${o}" stroke-width=".55">${s}</g>`};
-/* BASHRA leaf-sprig mark */
+/* Malpn leaf-sprig mark */
 function mark(cx,y,s,c){
   const L=[[3,8.6,1],[6.5,5.2,-1],[10.5,2,1],[14.5,-1.6,-1],[18.6,-5,1]];
   return `<g transform="translate(${cx-11*s} ${y}) scale(${s})" fill="${c}"><path d="M0 12 C6 7 13 1 22 -8" stroke="${c}" stroke-width=".7" fill="none"/>${L.map(([x,yy,d])=>`<path d="M0 0 C2.2 -2.2 5.8 -2.2 8 0 C5.8 2.2 2.2 2.2 0 0Z" transform="translate(${x} ${yy}) rotate(${d>0?-95:15})"/>`).join('')}<path d="M0 0 C2.2 -2.2 5.8 -2.2 8 0 C5.8 2.2 2.2 2.2 0 0Z" transform="translate(21 -7.4) rotate(-40)"/></g>`;
@@ -38,7 +38,7 @@ function printV(p,cx,top,w,c,acc,sizeY,tag){
   const fs=Math.min(6.4,(w-10)/(Math.max(a.length,b.length)*.7)), bf=Math.min(15,w/5.4);
   return `${mark(cx,top,.95,acc)}
   <g text-anchor="middle" fill="${c}">
-   <text x="${cx}" y="${top+31}" font-family="Cormorant Garamond,Georgia,serif" font-size="${bf}" letter-spacing="${bf*.16}" font-weight="500">BASHRA</text>
+   <text x="${cx}" y="${top+31}" font-family="Cormorant Garamond,Georgia,serif" font-size="${bf}" letter-spacing="${bf*.16}" font-weight="500">Malpn</text>
    <text x="${cx}" y="${top+39}" font-family="Jost,sans-serif" font-size="4.2" letter-spacing="2.1">SKINCARE</text>
    <line x1="${cx}" x2="${cx}" y1="${top+50}" y2="${top+88}" stroke="${acc}" stroke-width=".55"/>
    <text x="${cx}" y="${top+104}" font-family="Jost,sans-serif" font-size="${fs}" letter-spacing=".9">${a}</text>
@@ -105,7 +105,7 @@ function bottle(p,{vb,shadow=true,reflect=false}={}){
       <rect x="30" y="226" width="140" height="60" rx="7" fill="#000" filter="url(#${u}w)" opacity=".9"/>
       <rect x="33" y="227" width="134" height="3" rx="1.5" fill="#fff" opacity=".22"/>
       ${mark(70,302,.68,OL)}
-      <g fill="${OL}" text-anchor="middle"><text x="70" y="330" font-family="Cormorant Garamond,Georgia,serif" font-size="12" letter-spacing="1.9" font-weight="500">BASHRA</text><text x="70" y="337" font-family="Jost,sans-serif" font-size="3.6" letter-spacing="1.8">SKINCARE</text></g>
+      <g fill="${OL}" text-anchor="middle"><text x="70" y="330" font-family="Cormorant Garamond,Georgia,serif" font-size="12" letter-spacing="1.9" font-weight="500">Malpn</text><text x="70" y="337" font-family="Jost,sans-serif" font-size="3.6" letter-spacing="1.8">SKINCARE</text></g>
       <line x1="104" x2="104" y1="298" y2="352" stroke="${OL}" stroke-width=".5" opacity=".6"/>
       <g fill="${OL}" text-anchor="middle" font-family="Jost,sans-serif"><text x="135" y="318" font-size="5.6" letter-spacing=".8">NOURISHING</text><text x="135" y="326.5" font-size="5.6" letter-spacing=".8">FACE CREAM</text><text x="135" y="350" font-size="4.2" letter-spacing="1">${p.size.toUpperCase()}</text></g>
       ${spec(34,286,132,90,u,.45)}`;
@@ -182,7 +182,7 @@ function vHome(){
   const pos=[{id:'toner',l:35,w:35,b:13,d:.4},{id:'serum',l:8,w:29,b:12,d:.6},{id:'cleanser',l:58,w:33,b:6,d:.9},{id:'cream',l:16,w:43,b:1,d:1.2}];
   return `
   <section class="hero wrap">
-    <div class="hero-bgword">BASHRA</div>
+    <div class="hero-bgword">Malpn</div>
     <div class="hero-copy">
       <p class="eyebrow rv">Nature meets science</p>
       <h1 class="hero-h rv"><span class="ln"><span>Nature's care</span></span><span class="ln"><span><em>for your</em> skin.</span></span></h1>
@@ -191,32 +191,32 @@ function vHome(){
     </div>
     <div class="hero-stage rv d1" id="stage">
       <div class="hero-ring"></div>
-      <div class="arch hero-arch"><div class="hero-par" id="heroPar"><img class="hero-img" src="assets/images/hero.jpg" alt="BASHRA Gentle Face Cleanser, Radiant Skin Toner, Nourishing Face Cream and Revitalizing Face Serum on natural stone"></div></div>
+      <div class="arch hero-arch"><div class="hero-par" id="heroPar"><img class="hero-img" src="assets/images/hero.jpg" alt="Malpn Gentle Face Cleanser, Radiant Skin Toner, Nourishing Face Cream and Revitalizing Face Serum on natural stone"></div></div>
       <div class="hero-chip"><b>04</b><span>Essentials<br>The Ritual Collection</span></div>
       <div class="hero-cap"><span>Cleanse · Tone · Treat · Nourish</span><span>Made in Egypt</span></div>
     </div>
     <div class="scroll-cue"><i></i>Scroll</div>
   </section>
 
-  <div class="mq" aria-hidden="true"><div class="mq-t">${('<span>Nature meets science</span><span>Nature\'s care for your skin</span><span>BASHRA Skincare</span>').repeat(4)}</div></div>
+  <div class="mq" aria-hidden="true"><div class="mq-t">${('<span>Nature meets science</span><span>Nature\'s care for your skin</span><span>Malpn Skincare</span>').repeat(4)}</div></div>
 
   <section class="section wrap phil">
     <p class="eyebrow rv">Our philosophy</p>
     <h2 class="phil-h rv"><span class="nat">Nature</span><small>meets</small><span class="sci">Science</span></h2>
     <div class="phil-cols">
-      <div class="phil-col rv"><span class="num">I</span><div><h3>Nature</h3><p>Our inspiration — the calm of botanicals and the warmth of Egyptian earth, reflected in every colour, texture and detail of BASHRA.</p></div></div>
+      <div class="phil-col rv"><span class="num">I</span><div><h3>Nature</h3><p>Our inspiration — the calm of botanicals and the warmth of Egyptian earth, reflected in every colour, texture and detail of Malpn.</p></div></div>
       <div class="phil-col rv d1"><span class="num">II</span><div><h3>Science</h3><p>Our method — a considered, step-by-step approach to care. Four essentials, each with its own place in your daily ritual.</p></div></div>
     </div>
   </section>
 
   <section class="studio">
     <div class="studio-copy">
-      <p class="eyebrow rv" style="color:var(--taupe)">BASHRA Skincare Rituals</p>
+      <p class="eyebrow rv" style="color:var(--taupe)">Malpn Skincare Rituals</p>
       <h2 class="rv">Nature's care,<br><em>beautifully kept.</em></h2>
       <p class="rv d1">Gentle Face Cleanser, Radiant Skin Toner, Revitalizing Face Serum and Nourishing Face Cream — four essentials, created to live together as one daily ritual.</p>
       <a class="btn light rv d2" href="#shop">Explore the collection <span class="arr">→</span></a>
     </div>
-    <div class="studio-img rv"><img src="assets/images/studio.jpg" alt="BASHRA cleanser, toner and cream on stone against a deep olive background" loading="lazy"></div>
+    <div class="studio-img rv"><img src="assets/images/studio.jpg" alt="Malpn cleanser, toner and cream on stone against a deep olive background" loading="lazy"></div>
   </section>
 
   <section class="wrap" style="padding-top:clamp(90px,12vw,170px);padding-bottom:clamp(90px,12vw,170px)">
@@ -275,7 +275,7 @@ function vProduct(id){
   const p=byId(id); if(!p) return vShop();
   const views=galleryViews(p);
   const others=PRODUCTS.filter(x=>x.id!==id);
-  const pending='To be added from BASHRA\'s official product information.';
+  const pending='To be added from Malpn\'s official product information.';
   return `<div class="wrap">
     <div class="crumb"><a href="#home">Home</a> / <a href="#shop">Shop</a> / ${p.name}</div>
     <div class="pd">
@@ -286,7 +286,7 @@ function vProduct(id){
           <div class="gal-dots">${views.map((v,i)=>`<i class="${i?'':'on'}"></i>`).join('')}</div>
         </div>
         <div class="thumbs" style="--tint:${p.tint}">${views.map((v,i)=>`<button class="thumb ${i?'':'on'}" data-thumb="${i}" aria-label="${v.k} view"><div style="position:absolute;inset:0;display:grid;place-items:center;transform:scale(.9)">${v.h}</div><span>${v.k}</span></button>`).join('')}</div>
-        <p class="photo-note">Studio renders and photography based on BASHRA packaging designs.</p>
+        <p class="photo-note">Studio renders and photography based on Malpn packaging designs.</p>
       </div>
       <div class="pi rv d1">
         <p class="eyebrow">Step ${p.n} — ${p.step}</p>
@@ -300,7 +300,7 @@ function vProduct(id){
         <p class="note">Prototype: stock and delivery options will be connected in the live store.</p>
         <div class="acc">
           <div class="acc-i open"><button class="acc-h">Description<i></i></button><div class="acc-b"><div><p><span class="pending">Full product description — ${pending}</span></p></div></div></div>
-          <div class="acc-i"><button class="acc-h">How to use<i></i></button><div class="acc-b"><div><p>${p.name} is step ${p.n} of the BASHRA ritual (${PRODUCTS.map(x=>x.step).join(' → ')}).<br><br><span class="pending">Directions for use — ${pending}</span></p></div></div></div>
+          <div class="acc-i"><button class="acc-h">How to use<i></i></button><div class="acc-b"><div><p>${p.name} is step ${p.n} of the Malpn ritual (${PRODUCTS.map(x=>x.step).join(' → ')}).<br><br><span class="pending">Directions for use — ${pending}</span></p></div></div></div>
           <div class="acc-i"><button class="acc-h">Ingredients<i></i></button><div class="acc-b"><div><p><span class="pending">Full ingredient list (INCI) — ${pending}</span></p></div></div></div>
         </div>
       </div>
@@ -316,24 +316,24 @@ function vStory(){
   return `<section class="wrap ph">
     <p class="eyebrow rv">Our story</p>
     <h1 class="rv"><span class="ln"><span>Where <em>nature</em></span></span><span class="ln"><span>meets science.</span></span></h1>
-    <p class="lead rv d1">BASHRA is an Egyptian skincare brand built on a simple belief: everyday care can be elegant, natural and calm — without ever feeling complicated.</p>
+    <p class="lead rv d1">Malpn is an Egyptian skincare brand built on a simple belief: everyday care can be elegant, natural and calm — without ever feeling complicated.</p>
   </section>
   <section class="wrap" style="padding-bottom:clamp(80px,10vw,140px)">
     <div class="chap">
       <div class="cn rv">I</div>
       <div class="rv"><p class="eyebrow">Philosophy</p><h2 style="margin-top:12px">Nature meets science</h2><p>We draw our inspiration from nature — its colours, its calm, its rhythm — and pair it with a clear, structured way of caring for skin.</p><p>The result is a ritual of four essentials, each designed to take its own place in your day.</p></div>
-      <div class="chap-v arch rv d1"><img src="assets/images/hero.jpg" alt="BASHRA ritual collection" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%"></div>
+      <div class="chap-v arch rv d1"><img src="assets/images/hero.jpg" alt="Malpn ritual collection" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%"></div>
     </div>
     <div class="chap">
       <div class="cn rv">II</div>
       <div class="rv"><p class="eyebrow">Our promise</p><h2 style="margin-top:12px">Luxury, made accessible</h2><p>We believe premium care should feel warm and welcoming — never intimidating. Considered design, honest presentation and a ritual that is easy to follow.</p></div>
-      <div class="chap-v rv d1" style="--tint:#333520"><img src="assets/images/studio.jpg" alt="BASHRA products on stone" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+      <div class="chap-v rv d1" style="--tint:#333520"><img src="assets/images/studio.jpg" alt="Malpn products on stone" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
     </div>
     <div class="chap">
       <div class="cn rv">III</div>
-      <div class="rv"><p class="eyebrow">Our roots</p><h2 style="margin-top:12px">Made in Egypt, for you</h2><p>BASHRA is proudly Egyptian — created to stand among international skincare brands while staying true to its own identity.</p>
-        <p><span class="pending">Founder's story, brand origin and the meaning behind the name BASHRA — to be written with you.</span></p></div>
-      <div class="chap-v arch rv d1" style="--tint:var(--walnut)"><div style="position:absolute;inset:0;display:grid;place-items:center;color:var(--cream);font-family:'Cormorant Garamond';font-size:clamp(2rem,5vw,3.4rem);letter-spacing:.2em;padding-left:.2em">BASHRA</div></div>
+      <div class="rv"><p class="eyebrow">Our roots</p><h2 style="margin-top:12px">Made in Egypt, for you</h2><p>Malpn is proudly Egyptian — created to stand among international skincare brands while staying true to its own identity.</p>
+        <p><span class="pending">Founder's story, brand origin and the meaning behind the name Malpn — to be written with you.</span></p></div>
+      <div class="chap-v arch rv d1" style="--tint:var(--walnut)"><div style="position:absolute;inset:0;display:grid;place-items:center;color:var(--cream);font-family:'Cormorant Garamond';font-size:clamp(2rem,5vw,3.4rem);letter-spacing:.2em;padding-left:.2em">Malpn</div></div>
     </div>
   </section>`;
 }
@@ -342,17 +342,17 @@ function vIngredients(){
   return `<section class="wrap ph">
     <p class="eyebrow rv">Botanical ingredients</p>
     <h1 class="rv"><span class="ln"><span>The <em>Botanical</em></span></span><span class="ln"><span>Library.</span></span></h1>
-    <p class="lead rv d1">A considered look at what goes into every BASHRA formula — where it comes from and why it has a place in your ritual.</p>
+    <p class="lead rv d1">A considered look at what goes into every Malpn formula — where it comes from and why it has a place in your ritual.</p>
     <figure class="bot-hero rv d2"><img src="assets/images/botanicals.jpg" alt="Botanical illustrations of leaves and branches" loading="lazy"><figcaption>Botanical studies</figcaption></figure>
   </section>
   <section class="wrap" style="padding-bottom:clamp(80px,10vw,140px)">
-    <div class="banner rv"><div><b>Content in progress</b>Ingredient names, origins and roles will be added only from BASHRA's verified formulas. The layout below is ready for them.</div></div>
+    <div class="banner rv"><div><b>Content in progress</b>Ingredient names, origins and roles will be added only from Malpn's verified formulas. The layout below is ready for them.</div></div>
     <div class="ing-grid">
       ${BOTS.map((f,i)=>`<article class="ing rv d${i%3}">
         <svg class="bot" viewBox="0 0 120 160" fill="none" stroke-width="1">${f(i%2?'#71421E':'#48572D')}</svg>
         <p class="k">Botanical ${String(i+1).padStart(2,'0')}</p>
         <h3>Ingredient name</h3>
-        <p style="color:var(--sage);margin-top:8px;font-style:italic">Origin, role in the formula, and which BASHRA products feature it.</p>
+        <p style="color:var(--sage);margin-top:8px;font-style:italic">Origin, role in the formula, and which Malpn products feature it.</p>
       </article>`).join('')}
     </div>
   </section>`;
@@ -374,7 +374,7 @@ function vRituals(){
       </div>`).join('')}
     </div>
     <div class="notes">
-      <div class="rv"><h4>Follow the pack</h4><p style="color:#434933">Always follow the directions printed on each BASHRA product for amount and frequency.</p></div>
+      <div class="rv"><h4>Follow the pack</h4><p style="color:#434933">Always follow the directions printed on each Malpn product for amount and frequency.</p></div>
       <div class="rv d1"><h4>Try it first</h4><p style="color:#434933">When introducing any new skincare product, a patch test on a small area of skin is a good habit.</p></div>
     </div>
     <div style="text-align:center;margin-top:70px" class="rv"><button class="btn" data-add-all>Add the full ritual to bag <span class="arr">→</span></button></div>
@@ -397,7 +397,7 @@ function vContact(){
       <div class="form-msg" id="fmsg"></div>
     </form>
     <div class="rv d1">
-      <div class="chan"><div class="k">Email</div><div class="v"><span class="pending" style="font-size:1rem">Add BASHRA email</span></div></div>
+      <div class="chan"><div class="k">Email</div><div class="v"><span class="pending" style="font-size:1rem">Add Malpn email</span></div></div>
       <div class="chan"><div class="k">WhatsApp</div><div class="v"><span class="pending" style="font-size:1rem">Add WhatsApp number</span></div></div>
       <div class="chan"><div class="k">Instagram</div><div class="v"><span class="pending" style="font-size:1rem">Add @handle</span></div></div>
       <div class="chan" style="border-bottom:1px solid var(--line)"><div class="k">Based in</div><div class="v">Egypt</div></div>
@@ -431,8 +431,9 @@ const TITLES={home:"Nature's Care For Your Skin",shop:'Shop All',story:'Our Stor
 function render(){
   const r=route();
   app.innerHTML=r.name==='product'?vProduct(r.id):({home:vHome,shop:vShop,story:vStory,ingredients:vIngredients,rituals:vRituals,contact:vContact,cart:vCart}[r.name])();
-  document.title='BASHRA — '+(r.name==='product'?(byId(r.id)?.name||'Shop'):TITLES[r.name]);
+  document.title='Malpn — '+(r.name==='product'?(byId(r.id)?.name||'Shop'):TITLES[r.name]);
   document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===r.name||(r.name==='product'&&a.dataset.r==='shop')));
+  document.querySelectorAll('.mobile-nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===r.name||(r.name==='product'&&a.dataset.r==='shop')));
   if(r.name==='cart')renderCartPage();
   document.documentElement.style.scrollBehavior='auto';window.scrollTo(0,0);document.documentElement.style.scrollBehavior='';
   initPage();
@@ -483,7 +484,7 @@ function initPage(){
   const cf=document.getElementById('cform');
   if(cf)cf.onsubmit=e=>{e.preventDefault();const m=document.getElementById('fmsg');
     const ok=cf.f1.value.trim()&&/\S+@\S+\.\S+/.test(cf.f2.value)&&cf.f4.value.trim();
-    m.classList.add('show');m.textContent=ok?'Thank you. This is a prototype — the form is not connected yet, so your message was not sent. In the live website it will be delivered to the BASHRA team.':'Please add your name, a valid email and a message.'};
+    m.classList.add('show');m.textContent=ok?'Thank you. This is a prototype — the form is not connected yet, so your message was not sent. In the live website it will be delivered to the Malpn team.':'Please add your name, a valid email and a message.'};
 }
 
 /* scroll: header style + gentle hero parallax on touch */
@@ -560,7 +561,7 @@ function playFilm(){
   pr.style.transition='none';pr.style.width='0';void pr.offsetWidth;pr.style.transition=`width ${total}ms linear`;pr.style.width='100%';
   if(!dustOn){dustOn=true;dust()}
   let t=0;
-  scenes.forEach((s,i)=>{ftimers.push(setTimeout(()=>{scenes.forEach(o=>o!==s&&o.classList.remove('on'));s.classList.add('on');setFilmBg(s.dataset.bg);document.getElementById('fcount').textContent=s.dataset.count||'BASHRA'},t));t+=FDUR[i]});
+  scenes.forEach((s,i)=>{ftimers.push(setTimeout(()=>{scenes.forEach(o=>o!==s&&o.classList.remove('on'));s.classList.add('on');setFilmBg(s.dataset.bg);document.getElementById('fcount').textContent=s.dataset.count||'Malpn'},t));t+=FDUR[i]});
   ftimers.push(setTimeout(closeFilm,t));
 }
 function closeFilm(instant){
