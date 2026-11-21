@@ -186,18 +186,26 @@
 
   const arabicToEnglish = Object.fromEntries(Object.entries(dictionary).map(([en, ar]) => [ar, en]));
   const phrases = Object.entries(dictionary).sort((a, b) => b[0].length - a[0].length);
+  const translationCache = new Map();
   let language = 'en';
 
   function translate(value) {
+    const cacheKey = `${language}\u0000${value}`;
+    if (translationCache.has(cacheKey)) return translationCache.get(cacheKey);
     const source = language === 'ar' ? dictionary : arabicToEnglish;
     const exact = source[value.trim()];
-    if (exact !== undefined) return value.replace(value.trim(), exact);
+    if (exact !== undefined) {
+      const translated = value.replace(value.trim(), exact);
+      translationCache.set(cacheKey, translated);
+      return translated;
+    }
     let next = value;
     for (const [from, to] of phrases) {
       const a = language === 'ar' ? from : to;
       const b = language === 'ar' ? to : from;
       if (a) next = next.split(a).join(b);
     }
+    translationCache.set(cacheKey, next);
     return next;
   }
 
@@ -218,10 +226,13 @@
   }
 
   function setLanguage(next) {
+    const shouldTranslate = document.documentElement.lang !== next;
     language = next;
     document.documentElement.lang = next;
     document.documentElement.dir = next === 'ar' ? 'rtl' : 'ltr';
-    document.querySelectorAll('body *').forEach(updateNode);
+    // Walk the document tree once. Querying every descendant and then recursively
+    // walking each one repeats the same work many times, especially inside SVG art.
+    if (shouldTranslate) Array.from(document.body.childNodes).forEach(updateNode);
     document.title = translate(document.title);
     const toggle = document.getElementById('langToggle');
     if (toggle) {
