@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BASHRA Skincare — Nature's Care For Your Skin</title>
+<meta name="theme-color" content="#48572D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="lock">
+
+<!-- Intro film -->
+<div class="film" id="film" role="dialog" aria-label="BASHRA intro film">
+  <div class="f-bg" id="fbgA"></div><div class="f-bg" id="fbgB"></div>
+  <canvas id="fdust"></canvas>
+  <div class="f-vig"></div>
+  <div class="f-bar t"><span>BASHRA · The Ritual Collection</span><span id="fcount">—</span></div>
+  <div class="f-sc f-open" data-bg="radial-gradient(80% 70% at 50% 45%,#3E4D24 0%,#1B230E 60%,#0E1206 100%)">
+    <div><div class="l"></div><p class="t1">Nature meets science</p><p class="t2">Nature's care for your skin</p></div>
+  </div>
+  <div class="f-sc f-photo" data-bg="#333520" data-count="BASHRA">
+    <picture><source media="(orientation: portrait)" srcset="assets/images/hero.jpg"><img src="assets/images/studio.jpg" alt=""></picture>
+    <div class="f-pcap"><p>BASHRA</p><h2>Skincare <em>Rituals</em></h2></div>
+  </div>
+  <div id="fprods"></div>
+  <div class="f-sc f-fin" id="ffin" data-bg="radial-gradient(85% 75% at 50% 58%,#D8B488 0%,#8A5D36 46%,#26170A 100%)">
+    <div class="f-mark" data-mark></div><div class="f-logo">BASHRA</div>
+    <div class="f-tag">Skincare · Nature meets science</div>
+    <div class="f-row" id="frow"></div>
+    <button class="btn light f-enter" data-film-close>Enter the world of BASHRA <span class="arr">→</span></button>
+  </div>
+  <div class="f-prog"><i id="fprog"></i></div>
+  <div class="f-bar b"><span>Egypt</span><button class="f-skip" data-film-close>Skip intro ›</button></div>
+</div>
+<!-- Page transition -->
+<div class="pt" id="pt"><div class="pt-mark"><div class="logo" style="color:var(--cream)"><span class="logo-w">BASHRA</span></div></div></div>
+
+<!-- Header -->
+<header class="hdr" id="hdr">
+  <div class="hdr-l">
+    <button class="icon-btn burger" id="burger" aria-label="Open menu"><div><span></span><span></span></div></button>
+    <nav class="nav"><a href="#shop" data-r="shop">Shop</a><a href="#rituals" data-r="rituals">Rituals</a><a href="#ingredients" data-r="ingredients">Ingredients</a></nav>
+  </div>
+  <a href="#home" class="logo" aria-label="BASHRA home"><span class="logo-m" data-mark></span><span class="logo-w">BASHRA</span><span class="logo-s">SKINCARE</span></a>
+  <div class="hdr-r">
+    <nav class="nav"><a href="#story" data-r="story">Our Story</a><a href="#contact" data-r="contact">Contact</a></nav>
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">العربية</button>
+    <button class="icon-btn" data-open-cart aria-label="Open bag">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+      <span class="badge" id="badge">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mm" id="mm" aria-hidden="true">
+  <button class="icon-btn mm-close" id="mmClose" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  <p class="eyebrow" style="color:var(--taupe)">Menu</p>
+  <nav>
+    <a href="#home"><small>01</small>Home</a>
+    <a href="#shop"><small>02</small>Shop All</a>
+    <a href="#rituals"><small>03</small>Skincare Rituals</a>
+    <a href="#ingredients"><small>04</small>Botanical Ingredients</a>
+    <a href="#story"><small>05</small>Our Story</a>
+    <a href="#contact"><small>06</small>Contact Us</a>
+    <a href="#cart"><small>07</small>Your Bag</a>
+  </nav>
+  <div class="mm-foot">Nature's care for your skin</div>
+</div>
+
+<main id="app"></main>
+
+<!-- Footer -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <div>
+        <p class="eyebrow" style="color:var(--taupe)">The BASHRA Circle</p>
+        <h3 style="margin-top:14px">Rituals, launches &amp; <em>quiet</em> news.</h3>
+        <form class="nl" id="nl"><input type="email" required placeholder="Your email address" aria-label="Email"><button>Join →</button></form>
+        <div class="nl-msg" id="nlMsg"></div>
+      </div>
+      <div class="ftr-cols">
+        <div><h4>Shop</h4><a href="#shop">All Products</a><a href="#product-cleanser">Cleanser</a><a href="#product-toner">Toner</a><a href="#product-serum">Serum</a><a href="#product-cream">Cream</a></div>
+        <div><h4>Discover</h4><a href="#story">Our Story</a><a href="#ingredients">Ingredients</a><a href="#rituals">Rituals</a></div>
+        <div><h4>Help</h4><a href="#contact">Contact Us</a><a href="#cart">Your Bag</a></div>
+      </div>
+    </div>
+    <div class="ftr-word">BASHRA</div>
+    <div class="ftr-bot"><span>© BASHRA Skincare · Egypt · <button data-film style="text-decoration:underline;text-underline-offset:3px">Watch the film</button></span><span>Prototype preview — checkout, payments &amp; forms are not connected yet.</span></div>
+  </div>
+</footer>
+
+<!-- Cart drawer -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping bag">
+  <div class="dr-h"><h3>Your Bag</h3><button class="icon-btn" data-close-cart aria-label="Close bag"><svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
+  <div class="dr-b" id="drB"></div>
+  <div class="dr-f" id="drF"></div>
+</aside>
+
+<div class="modal" id="modal"><div class="modal-c">
+  <p class="eyebrow">Prototype</p>
+  <h3>Checkout is coming soon</h3>
+  <p>This preview has a working bag, but no real checkout yet. The live website will connect secure payment, delivery and order management — these need a real e-commerce platform and payment provider.</p>
+  <button class="btn" data-close-modal>Continue browsing</button>
+</div></div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/app.js"></script>
+<script src="js/i18n.js"></script>
+</body>
+</html>
